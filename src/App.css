@@ -1,0 +1,87 @@
+
+
+/* style main form */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .workip{
+  margin-top: 30px;
+}
+.precont{
+  
+  margin-top: 200px;
+}
+.wip{
+  margin-top: 30px;
+} */
+
+/* pdetails style */
+
+.pdetailsmain{
+  /* margin-left: 50px; */
+}
+
+.pdetailsheading{
+  margin-left: 110px;
+}
+
+/* style for contrect component */
+
+/* .contrectcA{
+  position: absolute;
+  justify-content: space-evenly;
+  top: 100px;
+  display: flex;
+  width: 1200px;
+ 
+} */
+
+/* .contrectcB{
+  position: absolute;
+  top: 450px;
+  display: flex;
+  width: 1200px;
+  justify-content: space-evenly;
+} */
+
+/* app.jsx style */
+.mainform{
+  /* background-color: powderblue; */
+}
+
+/* contrect compostyle */
+/* .contrectcompo{
+  width: 100vw;
+  height: 950px;
+} */
+
+/* style for dropdown */
+
+.second{
+  
+  margin-top: 40px;
+  
+
+}
+
+.contrectcompo{
+  width: 1200px;
+}
+/* style for indivisual */
+
+.inputstyle{
+  display:flex;
+  flex-Direction:row;
+  /* justify-content: space-evenly; */
+  margin-left: 200px;
+  margin-top: -16px;
+}
+.inputstywork{
+  display: flex;
+  flex-direction: row;
+  margin-left: 105px;
+}
+
