@@ -13,7 +13,7 @@ function TechnicalBid() {
   return (
     <div >
       <h3>
-        Technical Bid <span style={{ fontWeight: "lighter" }}>(optional)</span>
+        Technical Bid
       </h3>
 
       <div className="inputstyle">

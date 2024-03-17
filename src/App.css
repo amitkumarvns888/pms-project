@@ -7,69 +7,39 @@
   box-sizing: border-box;
 }
 
-/* .workip{
-  margin-top: 30px;
-}
-.precont{
-  
-  margin-top: 200px;
-}
-.wip{
-  margin-top: 30px;
-} */
 
-/* pdetails style */
 
 .pdetailsmain{
   /* margin-left: 50px; */
 }
 
 .pdetailsheading{
-  margin-left: 110px;
+font-family: sans-serif;
+  margin: auto;
+  text-align: center;
+  padding: 15px;
+  padding-bottom: 30px;
 }
 
 /* style for contrect component */
 
-/* .contrectcA{
-  position: absolute;
-  justify-content: space-evenly;
-  top: 100px;
-  display: flex;
-  width: 1200px;
- 
-} */
-
-/* .contrectcB{
-  position: absolute;
-  top: 450px;
-  display: flex;
-  width: 1200px;
-  justify-content: space-evenly;
-} */
 
 /* app.jsx style */
 .mainform{
-  /* background-color: powderblue; */
+  background-color: #fdfefe;
 }
 
-/* contrect compostyle */
-/* .contrectcompo{
-  width: 100vw;
-  height: 950px;
-} */
+body{
+  background-color: #EAEDED;
+  font-family: sans-serif;
+}
+
 
 /* style for dropdown */
 
-.second{
-  
-  margin-top: 40px;
-  
 
-}
 
-.contrectcompo{
-  width: 1200px;
-}
+
 /* style for indivisual */
 
 .inputstyle{
@@ -84,4 +54,17 @@
   flex-direction: row;
   margin-left: 105px;
 }
+
+.optionclass{
+  margin-left: -620px;
+  margin-top: 50px;
+  width: 1200px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.inputfirst{
+ 
+ margin-left: 200px;
+}
+
 

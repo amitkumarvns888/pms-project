@@ -12,22 +12,23 @@ const onFinishFailed = (values) => {
 function NoticeInvitingTendor() {
   return (
     <div>
-      <h3>Notice Inviting Tendor</h3>
+      <h3>NIT</h3>
 
       <div className="inputstyle">
         <Form.Item
           name="nitNumber"
-          label="Notice Inviting No."
-          rules={[{ required: true }]}
+          label="NIT No."
+        //   rules={[{ required: true }]}
         >
           <InputNumber />
         </Form.Item>
 
         <Form.Item
           name="nitDate"
-          label="Notice Inviting Date"
-          rules={[{ required: true }]}
-		  className="req"
+          label="NIT Date"
+        //   rules={[{ required: true }]}
+		  className="req"        
+
 
         >
           <DatePicker />

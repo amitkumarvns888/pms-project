@@ -9,7 +9,10 @@ import TechnicalBid from '../component/precontre/TechnicalBid'
 // import WorkOrder from '../component/precontre/WorkOrder'
 import { Form, DatePicker, InputNumber, Button } from "antd";
 import Sension from '../component/precontre/SensionA'
+import { BrowserRouter, Routes,Route, useNavigate } from 'react-router-dom'
+
 const ContrectCompo = () => {
+const navigate=useNavigate()
     return (
         <div className='contrectcompo'>
                 <Requisition />
@@ -23,6 +26,10 @@ const ContrectCompo = () => {
                 <TechnicalBid />
                 {/* <WorkOrder /> */}
 
+               
+
+
+                
                 <Form.Item
           wrapperCol={{
             xs: {
@@ -38,6 +45,8 @@ const ContrectCompo = () => {
           <Button type="primary" htmlType="submit">
             Submit
           </Button>
+
+           
         </Form.Item>
         </div>
     )
