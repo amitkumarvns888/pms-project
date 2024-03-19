@@ -87,7 +87,7 @@ function ProjectDetailsd() {
           label="Schedule Start Date"
           rules={[{ required: true }]}
         >
-          <DatePicker />
+          <DatePicker format="DD/MM/YYYY" />
         </Form.Item>
 
         <Form.Item

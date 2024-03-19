@@ -19,19 +19,20 @@ function NoticeInvitingTendor() {
           name="nitNumber"
           label="NIT No."
         //   rules={[{ required: true }]}
+      className="nitreqnum"
         >
-          <InputNumber />
+          <InputNumber style={{width:"180px", marginLeft:"34px"}} />
         </Form.Item>
 
         <Form.Item
           name="nitDate"
           label="NIT Date"
         //   rules={[{ required: true }]}
-		  className="req"        
+		  className="reqdate"        
 
 
         >
-          <DatePicker />
+          <DatePicker style={{ width: "180px", marginLeft: "30px" }} format="DD/MM/YYYY" />
         </Form.Item>
       </div>
     </div>

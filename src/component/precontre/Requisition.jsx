@@ -23,7 +23,7 @@ function Requisition() {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-          <DatePicker />
+          <DatePicker format="DD/MM/YYYY" />
         </Form.Item>
 		
 

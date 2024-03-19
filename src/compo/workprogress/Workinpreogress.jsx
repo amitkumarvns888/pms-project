@@ -1,11 +1,14 @@
 import React from "react";
-import { Form, DatePicker, InputNumber, Button,Select  } from "antd";
+import { Form, DatePicker, InputNumber, Button, Select } from "antd";
 
 
 import '../style.css'
+
 const Workinpreogress = () => {
   return (
-    <div style={{display:"flex", justifyContent:"space-evenly", width:"1000px"}}>
+    <div style={{ width: "1000px" }}>
+      <div style={{ display: "flex", justifyContent: "space-evenly", flexWrap:"wrap" }}>
+
         <Form.Item
           label="Work Order Number"
           name="workOrderNumber"
@@ -34,7 +37,7 @@ const Workinpreogress = () => {
           ]}
           className="workspace"
         >
-          <DatePicker />
+          <DatePicker format="DD/MM/YY" />
         </Form.Item>
 
         <Form.Item
@@ -55,7 +58,7 @@ const Workinpreogress = () => {
           />
         </Form.Item>
 
-{/* second dropdown */}
+        {/* second dropdown */}
 
         <Form.Item
           label="Project Work Type"
@@ -74,23 +77,61 @@ const Workinpreogress = () => {
           </Select>
         </Form.Item>
 
+
         <Form.Item
-          wrapperCol={{
-            xs: {
-              span: 24,
-              offset: 0,
+          label="Schd Start Date"
+          name="scheduledStartDate"
+          rules={[
+            {
+              required: true,
+              message: 'Please Enter schd date!',
             },
-            sm: {
-              span: 16,
-              offset: 8,
-            },
-          }}
-          className="worksubmit"
+          ]}
         >
-          <Button type="primary" htmlType="submit" style={{marginLeft:"5px"}}>
-            Submit
-          </Button>
+          <DatePicker format="DD/MM/YY" />
         </Form.Item>
+
+        <Form.Item label="Schd End Date" name="scheduledEndDate" rules={[{required:true,message:"please enter End Date"}]}>
+          <DatePicker format="DD/MM/YY" />
+        </Form.Item>
+
+
+
+        {/* <Form.Item
+          label="Likely Complition Date"
+          name="likelyCompletionDate"
+          className="lcd"
+          rules={[
+            {
+              required: true,
+              message: 'Please Enter Lcd!',
+            },
+          ]}
+        >
+          <DatePicker format="DD/MM/YY" />
+        </Form.Item> */}
+
+      </div>
+
+      
+
+      <Form.Item
+        wrapperCol={{
+          xs: {
+            span: 24,
+            offset: 0,
+          },
+          sm: {
+            span: 16,
+            offset: 8,
+          },
+        }}
+        className="worksubmit"
+      >
+        <Button type="primary" htmlType="submit" style={{ marginLeft: "5px" }}>
+          Submit
+        </Button>
+      </Form.Item>
     </div>
   );
 };

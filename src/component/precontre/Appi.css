@@ -8,3 +8,21 @@
 .fesiclassdrop{
     margin-left: 30px;
 }
+.reqq{
+    margin-left: 30px;
+}
+.sreq{
+    margin-left: 25px;
+}
+/* nit style */
+.nitreqnum{
+    margin-left: 4px;
+}
+.reqdate{
+    margin-left: 30px;
+}
+.lcd{
+    /* margin-left: -100px; */
+    position: relative;
+    left: -310px;
+}

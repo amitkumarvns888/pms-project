@@ -23,7 +23,7 @@ function Feasibility() {
         </Form.Item>
 
         <Form.Item label="Feasibility Date" className="fesiclassdrop"  name={"feasibilityDate"}>
-          <DatePicker />
+          <DatePicker style={{ width: "180px" }} format="DD/MM/YYYY" />
         </Form.Item>
       </div>
     </div>

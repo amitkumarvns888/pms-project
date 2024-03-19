@@ -10,9 +10,11 @@ function App() {
     <div >
       {/* <ProjectDetails /> */}
       <BrowserRouter>
+      
       <Routes>
            <Route path='/abc' element={<Pdetails/>}/>
         <Route path='/' element={<FormZone/>}/>
+
       </Routes>
       </BrowserRouter>
 

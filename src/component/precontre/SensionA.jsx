@@ -21,16 +21,16 @@ function Sension() {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-          <DatePicker />
+          <DatePicker style={{ width: "180px" }} format="DD/MM/YYYY" />
         </Form.Item>
 
         <Form.Item
           name="sanctionNumber"
           label="Sanction No"
-		  className="req"
+		  className="sreq"
 
         >
-          <InputNumber />
+          <InputNumber style={{width:"184px"}} />
         </Form.Item>
 
         <Form.Item
@@ -40,7 +40,7 @@ function Sension() {
 		  className="req"
 
         >
-          <InputNumber />
+          <InputNumber  style={{width:"180px"}}/>
         </Form.Item>
       </div>
     </div>

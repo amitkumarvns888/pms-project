@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Form, Input, DatePicker } from "antd";
 // for date and time
+import { useLocation } from "react-router-dom";
 
 import { Select } from "antd";
 import ContrectCompo from "./ContrectCompo";
@@ -14,7 +15,10 @@ import { Route, Router, useNavigate } from "react-router-dom";
 import FormZone from "../component/FormZone";
 
 const Pdetails = () => {
+  const [projectTitle, setProjectTitle] = useState("")
   const navigate = useNavigate();
+  const location = useLocation();
+
 
   const [selectedOption, setSelectedOption] = useState();
   // "pre-contractual";
@@ -22,17 +26,38 @@ const Pdetails = () => {
 
   // api calling
   const onFinish = async (values) => {
-    console.log(values.projectStatus);
-    if (values.projectStatus === "pre-contractual") {
-      await axios.post("http://localhost:8080/api/preContract", values);
+    const projectId = localStorage.getItem("projectId");
 
-      // form.resetFields() empty all input fields
-      navigate("/");
-    } else {
-      await axios.post("http://localhost:8080/api/workInProgress", {
-        ...values,
-        projectId: 1,
-      });
+    if (projectId) {
+
+      try {
+        // Make a PUT or PATCH request to update the project
+        await axios.patch("http://localhost:8080/api/updatePreContract", { ...values, projectId });
+        navigate("/");
+        localStorage.removeItem("projectId")
+        navigate("/");
+      } catch (error) {
+        console.error("Error updating project:", error);
+        localStorage.removeItem("projectId")
+      }
+    }
+
+    if (!projectId) {
+      if (values.projectStatus === "pre-contractual") {
+        await axios.post("http://localhost:8080/api/preContract", values);
+
+        // form.resetFields() empty all input fields
+        navigate("/");
+      }
+      if (values.projectStatus === "work-in-progress") {
+        await axios.post("http://localhost:8080/api/workInProgress", {
+          ...values,
+          projectId,
+
+        });
+        navigate("/");
+      }
+
     }
   };
 
@@ -69,6 +94,7 @@ const Pdetails = () => {
         initialValues={{
           layout: "inline",
           projectStatus: "pre-contractual",
+          // projectTitle: localStorage.getItem("projectTitle")
         }}
       >
         {/* project details */}
@@ -104,10 +130,10 @@ const Pdetails = () => {
             placeholder="Select Status"
             onChange={handleChange}
             value={selectedOption}
-            // defaultValue={"pre-contractual"}
+          // defaultValue={"pre-contractual"}
           >
             <Option value="work-in-progress">Work in progress</Option>
-            <Option value="pre-contractual">Pre contractual</Option>
+            <Option value="pre-contractual">Pre contract</Option>
           </Select>
 
           {selectedOption && (
@@ -121,7 +147,7 @@ const Pdetails = () => {
               {selectedOption === "pre-contractual" && (
                 <div className="second">
                   {/* design pre-contrectual phase */}
-                  <ContrectCompo />
+                  <ContrectCompo  />
                 </div>
               )}
             </div>

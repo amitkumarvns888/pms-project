@@ -21,24 +21,24 @@ function Estimate() {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-          <DatePicker />
+          <DatePicker style={{ width: "180px" }} format="DD/MM/YYYY" />
         </Form.Item>
 
         <Form.Item
           name="estimateNumber"
           label="Estimate No"
-		  className="req"
+          className="reqq"
         >
-          <InputNumber />
+          <InputNumber style={{ width: "180px" }} />
         </Form.Item>
 
         <Form.Item
           name="estimateAmount"
           label="Estimate Amount"
           rules={[{ required: true }]}
-		  className="req"
+          className="req"
         >
-          <InputNumber />
+          <InputNumber style={{ width: "180px" }} />
         </Form.Item>
       </div>
     </div>

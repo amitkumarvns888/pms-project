@@ -18,7 +18,7 @@ function TechnicalBid() {
 
       <div className="inputstyle">
         <Form.Item label="Technical Bid Date" name="tBidDate">
-          <DatePicker />
+          <DatePicker format="DD/MM/YYYY" />
         </Form.Item>
       </div>
 
